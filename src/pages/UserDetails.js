@@ -6,18 +6,16 @@ import { useState, useEffect } from "react";
 
 function UserDetails() {
 	const navigate = useNavigate();
-	
-
-	const token = process.env.REACT_APP_API_KEY;
-	const options = {headers: { Authorization: `Bearer ${token}`}};
-	
-	const apiLink = 'https://api.github.com/users/';
 
 	const { username } = useParams();
 	const [userDetails, setUserDetails] = useState(null);
 	const [userRepositories, setuserRepositories] = useState([]);
 
 	useEffect(()=>{
+		const token = process.env.REACT_APP_API_KEY;
+		const options = {headers: { Authorization: `Bearer ${token}`}};
+		const apiLink = 'https://api.github.com/users/';
+
 		axios({
 			url: `${apiLink}${username}`,
 			method: "GET",
@@ -46,7 +44,7 @@ function UserDetails() {
 				transition={{ duration: 0.5 }}
 			>
 				<div className="main-details">
-					<img className="avatar" src={userDetails.avatar_url}></img>
+					<img className="avatar" src={userDetails.avatar_url} alt={userDetails.login+"'s avatar"}></img>
 					<h2 className="username">{userDetails.login}</h2>
 					<div className="user-statistics">
 						<div className="statistics-category repositories">
