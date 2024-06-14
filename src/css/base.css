@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+.container {
+  width: min(1080px, 100% - 30px);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Some things only work in flex containers for mysterious reasons. */
+/* Flex vertical behaves similar to the default while having the benefits of being a flex container. */
+.flex-vertical {
+  display: flex;
+	flex-direction: column;
+}
+
+.center {
+  align-items: center;  
+}
+
+a {
+  /* NO */
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  font-size: 0;
+}
+
+
+/* - - - - - - - - - -
+  BLUE LINKS
+  applies the default <a>
+  styles in case they are
+  wanted for some reason
+ - - - - - - - - - - */
+a.bluelink {
+  text-decoration: underline;
+  color: #0000FF;
+}
+
+.app-root {
+	min-height: 100vh;
+}
+
+main {
+	min-height: calc(100vh - var(--app-header-height) - var(--app-footer-height));
+}
+
+/* - - - - - - - - - -
+	HIDDEN ITEMS
+	makes the element
+	invisible until the
+	class is removed
+ - - - - - - - - - - */
+.hide {
+	visibility: hidden;
+}

@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+:root {
+	--background-colour: #010409;
+	--secondary-background-colour: #161b22;
+	--font-colour: #ffffff;
+	--secondary-font-colour: #00ffff;
+
+	--icon-size: 128px;
+
+	--button-colour: #238636;
+	--button-hover-colour: #29903b;
+	--button-font-colour: #ffffff;
+}
+
+body {
+	background-color: var(--background-colour);
+	color: #ffffff;
+}
+
+.full-page {
+	height: 100vh;
+}
+
+.centered {
+	margin:auto;
+}
+
+.github-icon {
+	fill: #ffffff;
+	width: var(--icon-size);
+	height: var(--icon-size);
+}
+
+.home-div {
+	text-align: center;
+
+	h2 {
+		font-size: 2.4rem;
+		margin-top: 16px;
+	}
+}
+
+.searchbar {
+	margin-top: 8px;
+
+	input, button {
+		height: 28px;
+	}
+
+	input {
+		width:200px;
+		padding-left: 8px;
+		border-top-left-radius: 14px;
+		border-bottom-left-radius: 14px;
+	}
+
+	button {
+		background-color: var(--button-colour);
+		color: var(--button-font-colour);
+		border-top-right-radius: 14px;
+		border-bottom-right-radius: 14px;
+		width:60px;
+
+		&:hover {
+			background-color: var(--button-hover-colour);
+		}
+	}
+}
+
+.search-result {
+	color: #d02020;
+	margin-top: 4px;
+}
+
+.main-details {
+	display:flex;
+	flex-direction: column;
+	margin-inline: auto;
+	margin-top:100px;
+	text-align: center;
+
+	a {
+		margin-inline: auto;
+	}
+}
+.avatar {
+	display:block;
+	margin-inline: auto;
+	width:150px;
+	border-radius: 200px;
+}
+.username {
+	margin-top: 8px;
+	font-size: 4.8rem;
+}
+
+.user-statistics {
+	display:flex;
+	margin-inline: auto;
+	gap: 20px;
+	font-size: 1.6rem;
+	margin-top: 12px;
+
+	.statistics-category {
+		width: 100px;
+	}
+
+	.repositories {
+
+	}
+	.followers {
+		
+	}
+	.following {
+		
+	}
+
+	.count {
+		color: var(--secondary-font-colour);
+		text-align: center;
+	}
+	.statistic-name {
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+	}
+}
+
+.profile-button {
+	background-color: var(--button-colour);
+	color: var(--button-font-colour);
+	width: 100px;
+	height: 30px;
+	border-radius: 15px;
+	cursor: pointer;
+	margin-top:18px;
+	font-size: 1.4rem;
+}
+
+.profile-button:hover {
+	background-color: var(--button-hover-colour);
+}
+
+.repositories-title {
+	margin-top: 60px;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+.repositories {
+
+}
+
+.repository {
+	background-color: var(--secondary-background-colour);
+	display:flex;
+	margin-bottom: 20px;
+	margin-top: 10px;
+
+	width: 100%;
+	height: 80px;
+	padding: 10px;
+	border-radius: 5px;
+
+	.info-left {
+		width: 60%;
+	}
+	.info-right {
+		width: 40%;
+	}
+	
+	.repo-name {
+		color: var(--secondary-font-colour);
+		font-size: 2.0rem;
+	}
+
+	.repo-desc {
+		font-size: 1.2rem;
+	}
+
+	.repo-updated {
+		text-align: right;
+		font-size: 1rem;
+	}
+}
